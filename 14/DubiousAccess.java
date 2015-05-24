@@ -6,8 +6,12 @@ public class DubiousAccess{
   public final int x, y; // Dubious, but ok.
 
   public DubiousAccess(int xIn, int yIn) {
-    if(xIn < 0 || xIn > width) { throw new IllegalArgumentException("<<OOB>>"); }
-    if(yIn < 0 || yIn > height) { throw new IllegalArgumentException("<<OOB>>"); }
+    if(xIn < 0 || xIn > width) {
+      throw new IllegalArgumentException("<<OOB>>");
+    }
+    if(yIn < 0 || yIn > height) {
+      throw new IllegalArgumentException("<<OOB>>");
+    }
     x = xIn;
     y = yIn;
   }
